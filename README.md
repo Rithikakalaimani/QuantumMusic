@@ -36,7 +36,7 @@ This project addresses:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         QUANTUM MUSIC RECOMMENDATION                         │
+│                         QUANTUM MUSIC RECOMMENDATION                        │
 └─────────────────────────────────────────────────────────────────────────────┘
 
   User Query (NL)     FAISS Retrieval      LLM Context        Context Vector
@@ -47,7 +47,7 @@ This project addresses:
                                                                      │
                                                                      ▼
   ┌─────────────────────────────────────────────────────────────────────────┐
-  │              QUANTUM LAYER (Amplitude Encoding → 4 qubits)               │
+  │              QUANTUM LAYER (Amplitude Encoding → 4 qubits)              │
   │  |ψ⟩ = v₀|0000⟩ + v₁|0001⟩ + ... + v₁₅|1111⟩                            │
   └─────────────────────────────────────────────────────────────────────────┘
                                      │
@@ -203,65 +203,6 @@ Evaluation uses ground truth from classical similarity and compares KNN, QKNN, a
 
 ---
 
-## Project Structure
-
-```
-QuantumMusic/
-├── README.md                    # This file
-├── .gitignore
-├── requirements.txt             # Python dependencies
-├── RAG.ipynb                    # RAG pipeline: chunks, embeddings, LLM, context vectors, PCA
-├── rag+qknn.ipynb               # QKNN + Grover evaluation, metrics, recommendations
-├── scripts/
-│   └── generate_circuits.py     # Generate circuit diagrams (amplitude, SWAP, Grover)
-├── assets/
-│   └── images/                  # Circuit and result images
-│       ├── amplitude_encoding_circuit.png
-│       ├── swap_test_circuit.png
-│       ├── grover_oracle.png
-│       ├── grover_diffusion.png
-│       └── grover_full_circuit.png
-├── docs/                        # Optional extra documentation
-│   ├── Implementation_Explanation.md
-│   └── LLM_to_Quantum_State_Explanation.md
-└── data/                        # Placeholder; add datasets per your license
-```
-
----
-
-## Setup & Usage
-
-### 1. Clone and environment
-
-```bash
-git clone https://github.com/Rithikakalaimani/QuantumMusic.git
-cd QuantumMusic
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-### 2. Generate circuit images
-
-From the project root:
-
-```bash
-python scripts/generate_circuits.py
-```
-
-This writes the circuit figures into `assets/images/` (creates the directory if needed).
-
-### 3. Run notebooks
-
-- **RAG.ipynb:** Data load, chunking, embeddings, FAISS, LLM context extraction, PCA → 16D vectors, and quantum encoding + SWAP test construction.
-- **rag+qknn.ipynb:** Load 16D vectors and QKNN/Grover results; run metrics and recommendation examples.
-
-Use your own paths for data (e.g. Google Drive) as in the notebooks.
-
----
-
-## References
-
 - Blanzieri, E., & Pastorello, D. (2024). *A quantum k-nearest neighbors algorithm based on Euclidean distance estimation.*
 - Kerenidis, I., & Prakash, A. *Quantum recommendation systems.* arXiv:1603.08675.
 - Sawerwain, M., & Wróblewski, M. (2018). *Recommendation systems with the quantum k-NN and Grover algorithms.* International Journal of Applied Mathematics and Computer Science, 29(1), 139–150.
@@ -272,9 +213,3 @@ Use your own paths for data (e.g. Google Drive) as in the notebooks.
 ## License
 
 See repository or project documentation for license and dataset usage terms.
-
----
-
-**Authors:** Rithika S, Karthik Raja C  
-**Supervisor:** Dr. S. Rajalakshmi  
-**Institution:** Sri Sivasubramaniya Nadar College of Engineering, Chennai
