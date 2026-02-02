@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.env
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (large / private)
+data/
+*.csv
+*.pkl
+*.jsonl
+*.joblib
+!requirements.txt
+
+# Colab / Drive (paths in notebooks)
+/content/
+/drive/
+
+# Optional: keep small docs, ignore huge PDFs if desired
+# *.pdf
+
+# Generated images (optional: commit them for README)
+# assets/images/*.png
