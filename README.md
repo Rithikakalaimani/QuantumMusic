@@ -60,6 +60,8 @@ This project addresses:
     Top-K songs                Top-K by fidelity           Amplified ranking
     (high precision)           (stable, diverse)            (high diversity)
 ```
+![Architecture](https://github.com/Rithikakalaimani/QuantumMusic/blob/main/assets/archi.png)
+
 
 ---
 
@@ -132,7 +134,7 @@ Images are saved to `assets/images/`. If the images are not yet in the repo, run
 
 The circuit below shows how a 16-dimensional normalized vector is loaded into a 4-qubit register using Qiskit’s `Initialize` (amplitude encoding).
 
-![Amplitude Encoding Circuit](assets/images/amplitude_encoding_circuit.png)
+![Amplitude Encoding Circuit](https://github.com/Rithikakalaimani/QuantumMusic/blob/main/assets/qub.png)
 
 *Caption: Amplitude encoding of a 16D context vector into 4 qubits. The Initialize block prepares |ψ⟩ = Σᵢ vᵢ|i⟩.*
 
@@ -140,7 +142,7 @@ The circuit below shows how a 16-dimensional normalized vector is loaded into a 
 
 Structure: ancilla (H → c-SWAPs → H) + two 4-qubit registers (query and song). Measurement of the ancilla gives P(0), from which fidelity is computed.
 
-![SWAP Test Circuit](assets/images/swap_test_circuit.png)
+![SWAP Test Circuit](https://github.com/Rithikakalaimani/QuantumMusic/blob/main/assets/swap.png)
 
 *Caption: SWAP test for fidelity between query and song quantum states. Fidelity = 2·P(ancilla=0) − 1.*
 
@@ -149,17 +151,13 @@ Structure: ancilla (H → c-SWAPs → H) + two 4-qubit registers (query and song
 - **Oracle:** Multi-controlled Z (and X gates for basis state selection) to flip phase of marked states.
 - **Diffusion:** H – X – multi-controlled Z – X – H for inversion about the mean.
 
-![Grover Oracle](assets/images/grover_oracle.png)
-
 *Caption: Grover oracle marking “good” (high-relevance) song indices.*
-
-![Grover Diffusion](assets/images/grover_diffusion.png)
 
 *Caption: Grover diffusion operator (inversion about the mean).*
 
-![Grover Full Circuit](assets/images/grover_full_circuit.png)
-
 *Caption: Full Grover circuit: superposition → oracle → diffusion (repeated) → measurement.*
+
+![Grover Oracle](https://github.com/Rithikakalaimani/QuantumMusic/blob/main/assets/image.png)
 
 ---
 
